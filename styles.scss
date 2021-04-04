@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+
+$container-padding: 30px;
+$container-width:750px;
+$moderateCyan:hsl(176, 50%, 47%);
+$darkCyan:hsl(176, 72%, 28%);
+
+$black:hsl(0, 0%, 0%);
+$darkGrey:hsl(0, 0%, 48%);
+$background-color: hsl(0, 0%, 98%);
+
+$fontSize:16px;
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Commissioner';
+    background-color: $background-color;
+}
+
+h1{
+    color: $black;
+    font-size: 29px;
+    font-weight: 700px;
+}
+
+
+.header{
+    width: 100%;
+    height: 55vh;
+    background-image: url('./images/image-hero-desktop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .nav-bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1300px;
+        width: 100%;
+        margin: 0px auto;
+        height: 120px;
+
+        a{
+            color: white;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+.container{
+    img{
+        margin-top: -60px;
+    }
+    z-index: 99999;
+    padding: $container-padding;
+    margin: -70px auto 0px auto;
+    max-width: $container-width;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        padding-top: 30px;
+    }
+}
+
+
+p{
+    line-height: 1.75em;
+}
+
+.sub{
+    color: $darkGrey;
+    font-size: 16px;
+}
+
+.btns{
+    padding: 60px 80px 30px 80px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 700;
+
+    .bookmark{
+        background-color: #F2F2F2;
+        color: grey;
+    }
+
+    button{
+        font-family: 'Commissioner';
+        border: none;
+        background-color: $moderateCyan;
+        color: white;
+        padding: 20px 40px;
+        border-radius: 50px;
+        font-size: 16px;
+    }
+}
+
+
+.container-money{
+    display: grid;
+    gap: 20px;
+    row-gap: 30px;
+    max-width: $container-width;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "a1 a2 a3"
+    "b b b"
+    ;
+    background-color: white;
+    margin: 25px auto 0px auto;
+    padding: $container-padding;
+    border-radius: 20px;
+
+    .amount{
+        border-right: 1px solid lightgrey;
+
+        h1{
+            font-size: 40px;
+        }
+    }
+}
+
+
+#a1{
+    grid-area: a1;
+}
+
+#a2{
+    grid-area: a2;
+}
+
+#a3{
+    grid-area: a3;
+}
+
+.bar{
+    grid-area: b;
+    background-color: $background-color;
+    height: 15px;
+    border-radius: 10px;
+    width: 100%;
+
+    .progress{
+        border-radius: 10px;
+        z-index: 99999;
+        width: 60%;
+        height: 100%;
+        background-color: $moderateCyan;
+    }
+}
+
+.container-about{
+    margin: 25px auto 0px auto;
+    display: flex;
+    flex-direction: column;
+    padding: $container-padding;
+    max-width: $container-width;
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.card-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .card{
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid lightgrey;
+        border-radius: 10px;
+        .heading{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            .days{
+                font-weight: 700;
+                font-size: 30px;
+                .left{
+                    font-weight: 300 !important;
+                }
+            }
+    
+            button{
+                font-family: 'Commissioner';
+                border: none;
+                background-color: $moderateCyan;
+                color: white;
+                padding: 20px 40px;
+                border-radius: 50px;
+                font-size: 16px;
+            }
+    
+            h2{
+                color: $black;
+                font-size: 25px;
+                font-weight: 700px;
+            }
+    
+            .pledge{
+                color: $moderateCyan;
+            }
+        }
+    }
+}
